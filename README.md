@@ -8,4 +8,4 @@ React Drag & Drop builder
 - Styled components
 - Vite
 
-Click here to watch - <a href="drag-drop-builder.netlify.app/">Demo</a>
+Click here to see - <a href="drag-drop-builder.netlify.app/">Demo</a>
