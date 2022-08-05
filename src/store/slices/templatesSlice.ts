@@ -5,7 +5,7 @@ import { ISectionProps } from '@/features/Elements/components/Section/Section'
 import { getIdsToRemove, getUniqueId } from '@/utils'
 import { RootState } from '@/store/store'
 
-export type TTempalatePropsValues = TWidgetsPropsValues | TElementsPropsValues
+export type TTempalatePropsValues = (TWidgetsPropsValues | TElementsPropsValues) & { text?: string }
 
 const initialState: {
   byId: {
@@ -19,7 +19,7 @@ const initialState: {
   },
 }
 
-type OmittedTemplatePropsValues = Omit<TTempalatePropsValues, 'typename'>
+type OmittedTemplatePropsValues = Omit<TTempalatePropsValues, 'typename'> & { text?: string }
 
 const templatesSlice = createSlice({
   name: 'templates',
@@ -170,7 +170,7 @@ const templatesSlice = createSlice({
         }
       } else {
         for (const key in restProps) {
-          if (restProps.hasOwnProperty(key)) {
+          if (key in restProps) {
             const property = key as keyof typeof restProps
             state.byId[id][property] = restProps[property]
           }
