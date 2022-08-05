@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Flex', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Flex', sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Flex', sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.mx-1 {
+  margin: 4px;
+}
+
+.downwards::before,
+.upwards::after {
+  content: '';
+  display: block;
+  height: 15px;
+  background-color: var(--modifier-color);
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
